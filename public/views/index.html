@@ -3,6 +3,7 @@
 <head>
   <title>TodoJS</title>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css" />
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -13,11 +14,12 @@
 <body>
   <main ng-controller="TodoAppController">
     <form id="addTodo">
-      <input type="text" ng-model="todoTask">
+      <input type="text" ng-model="todoTask" placeholder="such todo much doge">
       <button type="submit" value="submit" ng-click="addTodo()"></button>
     </form>
-    <ul class="todoList" ng-repeat="todo in todoList">
-      <li id="todoTask">{{todo.text}}</li>
+    <ul class="todoList" ng-repeat="todo in todoList"ng-class="{'doneTodo': todo.done}">
+      <li class="todoContent" ng-model="todo.done">{{todo.text}}</li>
+      <input type="checkbox" ng-click="toggleDone()">
     </ul>
   </main>
 </body>
