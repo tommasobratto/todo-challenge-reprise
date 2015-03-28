@@ -13,11 +13,11 @@
 <body>
   <main ng-controller="TodoAppController">
     <form id="addTodo">
-      <input type="text">
+      <input type="text" ng-model="todoTask">
       <button type="submit" value="submit" ng-click="addTodo()"></button>
     </form>
-    <ul class="todoList">
-      <li id="todoTask"></li>
+    <ul class="todoList" ng-repeat="todo in todoList">
+      <li id="todoTask">{{todo.text}}</li>
     </ul>
   </main>
 </body>

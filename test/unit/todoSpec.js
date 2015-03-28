@@ -15,13 +15,16 @@ describe('TodoAppController', function() {
   });
 
   it('should show add a todo', function() {
-    scope.addTodo('testing... 1, 2, 3');
-    expect(scope.todoTask).toEqual('testing... 1, 2, 3');
+    scope.todoTask = 'testing... 1, 2, 3'; 
+    scope.addTodo();
+    expect(scope.todoList[0].text).toEqual('testing... 1, 2, 3');
   });
 
   it('should be able to store more than one todo in a list', function() {
-    scope.addTodo('testing... 1, 2, 3');
-    scope.addTodo('the code is... 0451');
-    expect(scope.todoList.length).toEqual(2)
+    scope.todoTask = 'testing... 1, 2, 3';
+    scope.addTodo();
+    scope.todoTask = 'the code is... 0451'; 
+    scope.addTodo();
+    expect(scope.todoList.length).toEqual(2);
   });
 });
