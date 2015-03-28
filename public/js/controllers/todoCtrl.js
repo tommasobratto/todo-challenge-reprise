@@ -4,7 +4,7 @@ TodoApp.controller('TodoAppController', function($scope) {
 
   $scope.addTodo = function() {
     if($scope.todoTask)
-    $scope.todoList.push({text: $scope.todoTask});
+    $scope.todoList.push({text: $scope.todoTask, done: false});
     $scope.todoTask = "";
   };
 });

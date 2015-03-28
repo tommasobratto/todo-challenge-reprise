@@ -27,4 +27,10 @@ describe('TodoAppController', function() {
     scope.addTodo();
     expect(scope.todoList.length).toEqual(2);
   });
+
+  it('should initialise a todo as a task to complete', function() {
+    scope.todoTask = "i haz todo dis";
+    scope.addTodo();
+    expect(scope.todoList[0].done).toEqual(false);
+  });
 });
