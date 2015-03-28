@@ -8,7 +8,7 @@ TodoApp.controller('TodoAppController', function($scope) {
     $scope.todoTask = "";
   };
 
-  $scope.toggleDone = function() {
-    $scope.todoList[0].done = $scope.todoList[0].done === false ? true: false;
+  $scope.toggleDone = function($index) {
+    $scope.todoList[$index].done = $scope.todoList[$index].done === false ? true: false;
   };
 });
