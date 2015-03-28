@@ -1,7 +1,7 @@
 # Todo Challenge: Reprise
 
 Trying to redo and complete the Makers Academy 7th week's Todo Challenge.
-The app should be built mainly using parts of the MEAN stack.
+The app should be built mainly using parts of the MEAN stack and strict TDD/Feature testing discipline.
 
 Features to add:
 - "clear all" function
