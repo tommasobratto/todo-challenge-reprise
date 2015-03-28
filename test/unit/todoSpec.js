@@ -37,7 +37,7 @@ describe('TodoAppController', function() {
   it('should toggle between done and false', function() {
     scope.todoTask = "much todo so procrastidoge";
     scope.addTodo();
-    scope.toggleDone();
+    scope.toggleDone(0);
     expect(scope.todoList[0].done).toEqual(true);
   });
 });
