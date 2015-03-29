@@ -10,3 +10,8 @@ Features to add:
 - "archive completed" and "show completed" functions
 - user registration and login/logout 
 - user personal todo storage in the DB
+
+Features added:
+- displaying todos
+- adding todos
+- toggling between "done" and "not done" states
