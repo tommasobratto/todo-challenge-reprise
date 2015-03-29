@@ -40,4 +40,35 @@ describe('TodoAppController', function() {
     scope.toggleDone(0);
     expect(scope.todoList[0].done).toEqual(true);
   });
+
+  it('should be able to clear the completed todos', function() {
+    scope.todoTask = 'testing... 1, 2, 3';
+    scope.addTodo();
+    scope.todoTask = 'the code is... 0451'; 
+    scope.addTodo();
+    scope.todoTask = "much todo so procrastidoge";
+    scope.addTodo();
+    scope.toggleDone(2);
+    scope.todoTask = "i haz todo dis";
+    scope.addTodo();
+    scope.toggleDone(3);
+    scope.clearDone();
+    expect(scope.todoList[2]).toEqual(undefined);
+    expect(scope.todoList[3]).toEqual(undefined);
+  });
+
+  it('should be able to clear all todos', function() {
+    scope.todoTask = 'testing... 1, 2, 3';
+    scope.addTodo();
+    scope.todoTask = 'the code is... 0451'; 
+    scope.addTodo();
+    scope.todoTask = "much todo so procrastidoge";
+    scope.addTodo();
+    scope.toggleDone(2);
+    scope.todoTask = "i haz todo dis";
+    scope.addTodo();
+    scope.toggleDone(3);
+    scope.clearAll();
+    expect(scope.todoList).toEqual([]);
+  });
 });
